@@ -1,0 +1,18 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+.mtj.tmp/
+*.properties
+*.jar
+*.war
+*.nar
+*.zip
+*.tar
+*.rar
+*.lml
+
+.idea
+.classpath
+.project
+/gradlew
+/gradlew.bat
