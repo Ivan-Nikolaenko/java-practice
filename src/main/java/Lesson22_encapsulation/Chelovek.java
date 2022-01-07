@@ -51,9 +51,9 @@ class Test {
         c.setVozrast(34);
         c.setVes(82);
         System.out.println(
-                "Имя : "+c.getName()+"\n" +
-                "Возраст : "+c.getVozrast()+"\n" +
-                "Вес : "+c.getVes()
+                "Имя : " + c.getName() + "\n" +
+                        "Возраст : " + c.getVozrast() + "\n" +
+                        "Вес : " + c.getVes()
         );
     }
 }
