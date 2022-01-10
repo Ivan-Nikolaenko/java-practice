@@ -1,4 +1,4 @@
-package Lesson22_encapsulation;
+package Lesson25_encapsulation;
 
 public class Test4 {
 
