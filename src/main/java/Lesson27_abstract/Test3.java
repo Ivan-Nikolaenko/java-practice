@@ -1,5 +1,6 @@
 package Lesson27_abstract;
 
+
 public class Test3 {
 }
 
@@ -15,11 +16,44 @@ class Employee  {
         System.out.println("Spat");
     }
 }
-class Doctor extends Employee{
-    void lechit(){
-        System.out.println("Lechit");
+class Teacher extends Employee implements Help_able{
+    int kolichestvouche;
+    void uchit(){
+        System.out.println("Uchit");
     }
-    class Xirurg extends Doctor{
-        String skalpel;
+
+    public void pomosh() {
+        System.out.println("Uchitel okazivaet pomosh");
     }
+
+    public void tushitPojar() {
+        System.out.println("Uchitel tushit pojar");
+    }
+}
+
+class Driver extends Employee implements Help_able,Swim_able{
+    int nazvanieMashin;
+    void uchit(){
+        System.out.println("Vodit");
+    }
+    public void pomosh() {
+        System.out.println("Uchitel okazivaet pomosh");
+    }
+
+    public void tushitPojar() {
+        System.out.println("Uchitel tushit pojar");
+    }
+
+    public void swim() {
+        System.out.println("Водитель плавает!)");
+    }
+}
+
+interface Help_able{
+    void pomosh();
+    void tushitPojar();
+}
+
+interface Swim_able{
+    void swim();
 }
