@@ -1,7 +1,6 @@
-package advanced_Comparable_Comparator;
+package Advanced_Comparable_Comparator;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -30,27 +29,20 @@ public class Employee implements Comparable<Employee> {
 
     @Override
     public int compareTo(Employee anotherEmp) {
-        if(this.id== anotherEmp.id){
-            return 0;
-        }else if (this.id<anotherEmp.id){
-            return -1;
-        }
-        else {
-            return 1;
-        }
+        return this.name.compareTo(anotherEmp.name);
     }
 }
 
 class Test1 {
     public static void main(String[] args) {
         List<Employee> list = new ArrayList<>();
-        Employee emp1= new Employee(15,"Ivan","Nikolaenko",3000);
-        Employee emp2= new Employee(6,"Kosti","Urdar",300);
+        Employee emp1= new Employee(15,"Mvan","Nikolaenko",3000);
+        Employee emp2= new Employee(6,"Aosti","Urdar",300);
         Employee emp3= new Employee(55,"Zaur","Telnar",100);
         list.add(emp1);
         list.add(emp2);
         list.add(emp3);
-        System.out.println(list);
         Collections.sort(list);
+        System.out.println(list);
     }
 }
