@@ -6,20 +6,21 @@ import java.util.Objects;
 
 public class HashCodeEx1 {
     public static void main(String[] args) {
-        Student st1 = new Student("Ivan","Nikolaenko",5);
-        Student st2 = new Student("Oleg","Petrenko",1);
-        Student st3 = new Student("Saha","Kilson",4);
+        Student st1 = new Student("Ivan", "Nikolaenko", 5);
+        Student st2 = new Student("Oleg", "Petrenko", 1);
+        Student st3 = new Student("Saha", "Kilson", 4);
 
-        Map<Student,Double> map = new HashMap<>();
-        map.put(st1,1.75);
-        map.put(st2,7.5);
-        map.put(st3,3.99);
+        Map<Student, Double> map = new HashMap<>();
+        map.put(st1, 1.75);
+        map.put(st2, 7.5);
+        map.put(st3, 3.99);
         System.out.println(map);
 
-        Student st4 = new Student("Ivan","Nikolaenko",5);
+        Student st4 = new Student("Ivan", "Nikolaenko", 5);
+        Student st5 = new Student("Igod", "Sidorov", 4);
         System.out.println(st1.hashCode());
-
-
+        System.out.println(st4.hashCode());
+        System.out.println(st1.equals(st4));
 
 
     }
@@ -49,10 +50,11 @@ class Student {
                 && Objects.equals(surname, student.surname);
     }
 
-    @Override
+        @Override
     public int hashCode() {
         return Objects.hash(name, surname, course);
     }
+
 
     public Student(String name, String surname, int course) {
         this.name = name;
