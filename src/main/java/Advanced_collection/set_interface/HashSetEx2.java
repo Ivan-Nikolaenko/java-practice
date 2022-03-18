@@ -27,5 +27,6 @@ public class HashSetEx2 {
         intersect.retainAll(hashSet2);
 
         System.out.println(intersect);
+
     }
 }
