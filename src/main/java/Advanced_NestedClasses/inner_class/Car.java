@@ -25,7 +25,7 @@ public class Car {
     }
 
     public class Engine {
-        private int horsePower;
+         int horsePower;
 
         @Override
         public String toString() {
