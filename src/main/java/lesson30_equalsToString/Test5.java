@@ -1,4 +1,4 @@
-package lesson30;
+package lesson30_equalsToString;
 
 
 public class Test5 {
@@ -10,6 +10,9 @@ public class Test5 {
     }
     Test5(int a) {
         System.out.println("Constructor 2");
+    }
+    static {
+        System.out.println("static");
     }
 
     public static void main(String[] args) {

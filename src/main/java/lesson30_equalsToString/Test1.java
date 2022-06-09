@@ -1,6 +1,4 @@
-package lesson30;
-
-import java.util.ArrayList;
+package lesson30_equalsToString;
 
 public class Test1 {
     public static void main(String[] args) {

@@ -1,6 +1,4 @@
-package lesson30;
-
-import Advanced_NestedClasses.Test;
+package lesson30_equalsToString;
 
 public class Test3 {
     void abc(int i){

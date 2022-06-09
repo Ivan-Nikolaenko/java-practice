@@ -1,4 +1,4 @@
-package lesson30;
+package lesson30_equalsToString;
 
 import java.util.ArrayList;
 
