@@ -52,15 +52,46 @@ class StudentInfo {
         }
     }
 
-    void printStudentsUnderAge(ArrayList<Student> aL, int age ) {
+    void printStudentsUnderAge(ArrayList<Student> aL, int age) {
         for (Student s : aL) {
-            if (s.avgGrade < age) {
+            if (s.age < age) {
+                printStudent(s);
+            }
+        }
+    }
+
+    void printStudentsBySex(ArrayList<Student> aL, char sex) {
+        for (Student s : aL) {
+            if (s.sex == sex) {
+                printStudent(s);
+            }
+        }
+    }
+
+    void printStudentsMixConditions(ArrayList<Student> aL, double avgGrade, int age, char sex) {
+        for (Student s : aL) {
+            if (s.avgGrade > avgGrade && s.age < age && s.sex == sex) {
                 printStudent(s);
             }
         }
     }
 
     public static void main(String[] args) {
+        ArrayList<Student> list = new ArrayList<>();
+        Student st1 = new Student("Ivan",'m',20,1,9.3);
+        Student st2 = new Student("Nikolay",'m',13,3,9.3);
+        Student st3 = new Student("Georgiy",'m',14,4,2.3);
+        Student st4 = new Student("Alex",'m',55,4,5.3);
+        Student st5 = new Student("Sofia",'f',66,5,6.3);
+        list.add(st1);
+        list.add(st2);
+        list.add(st3);
+        list.add(st4);
+        list.add(st5);
+        StudentInfo si = new StudentInfo();
+        si.printStudentsOverGrade(list,5);
+
+
 
     }
 }
